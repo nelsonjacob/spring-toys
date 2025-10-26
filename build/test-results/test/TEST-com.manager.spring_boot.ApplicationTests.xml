@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.manager.spring_boot.ApplicationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-10-26T20:38:34.735Z" hostname="Jacobs-MacBook-Pro-2.local" time="0.282">
+  <properties/>
+  <testcase name="testConnection()" classname="com.manager.spring_boot.ApplicationTests" time="0.278"/>
+  <testcase name="printConfig()" classname="com.manager.spring_boot.ApplicationTests" time="0.001"/>
+  <testcase name="contextLoads()" classname="com.manager.spring_boot.ApplicationTests" time="0.001"/>
+  <system-out><![CDATA[13:38:33.248 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.manager.spring_boot.ApplicationTests]: ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:38:33.297 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.manager.spring_boot.Application for test class com.manager.spring_boot.ApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-10-26T13:38:33.460-07:00  INFO 43824 --- [spring-boot] [    Test worker] c.manager.spring_boot.ApplicationTests   : Starting ApplicationTests using Java 25.0.1 with PID 43824 (started by jacobnelson in /Users/jacobnelson/workspace/spring-boot)
+2025-10-26T13:38:33.460-07:00  INFO 43824 --- [spring-boot] [    Test worker] c.manager.spring_boot.ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2025-10-26T13:38:33.716-07:00  INFO 43824 --- [spring-boot] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-26T13:38:33.728-07:00  INFO 43824 --- [spring-boot] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-10-26T13:38:33.925-07:00  INFO 43824 --- [spring-boot] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-26T13:38:34.027-07:00  INFO 43824 --- [spring-boot] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@129c4d19
+2025-10-26T13:38:34.028-07:00  INFO 43824 --- [spring-boot] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-26T13:38:34.044-07:00  INFO 43824 --- [spring-boot] [    Test worker] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/goals (PostgreSQL 16.10)
+2025-10-26T13:38:34.068-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.011s)
+2025-10-26T13:38:34.102-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 1
+2025-10-26T13:38:34.104-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2025-10-26T13:38:34.150-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-26T13:38:34.184-07:00  INFO 43824 --- [spring-boot] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-10-26T13:38:34.202-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-26T13:38:34.345-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-26T13:38:34.388-07:00  INFO 43824 --- [spring-boot] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.10
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-26T13:38:34.537-07:00  INFO 43824 --- [spring-boot] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-26T13:38:34.539-07:00  INFO 43824 --- [spring-boot] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-26T13:38:34.585-07:00  WARN 43824 --- [spring-boot] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-26T13:38:34.730-07:00  INFO 43824 --- [spring-boot] [    Test worker] c.manager.spring_boot.ApplicationTests   : Started ApplicationTests in 1.382 seconds (process running for 1.836)
+jdbc:postgresql://localhost:5432/goals
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/jacobnelson/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
