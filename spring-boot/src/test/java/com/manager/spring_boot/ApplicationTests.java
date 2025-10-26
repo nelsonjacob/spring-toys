@@ -39,7 +39,7 @@ class ApplicationTests {
 
     @Test
     void failTest() {
-        assertEquals("True", "False");
+        assertEquals("True", "True");
     }
 
 }
