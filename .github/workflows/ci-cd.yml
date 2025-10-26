@@ -36,12 +36,15 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           cache: 'gradle'
+          cache-dependency-path: 'spring-boot/**/*.gradle*'
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        working-directory: ./spring-boot
 
       - name: Run tests
         run: ./gradlew test --info
+        working-directory: ./spring-boot
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/goals
           SPRING_DATASOURCE_USERNAME: goals_user
@@ -49,20 +52,21 @@ jobs:
 
       - name: Build application
         run: ./gradlew build -x test
+        working-directory: ./spring-boot
 
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: build/test-results/test/
+          path: spring-boot/build/test-results/test/
 
       - name: Upload build artifacts
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: build/libs/
+          path: spring-boot/build/libs/
 
   build:
     name: Build Application
@@ -79,15 +83,18 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           cache: 'gradle'
+          cache-dependency-path: 'spring-boot/**/*.gradle*'
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+        working-directory: ./spring-boot
 
       - name: Build with Gradle
         run: ./gradlew build -x test
+        working-directory: ./spring-boot
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: war-file
-          path: build/libs/*.war
+          path: spring-boot/build/libs/*.war
