@@ -8,7 +8,8 @@ import org.springframework.core.env.Environment;
 import javax.sql.DataSource;
 import java.sql.Connection;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 @SpringBootTest
 class ApplicationTests {
@@ -34,6 +35,11 @@ class ApplicationTests {
     @Test
     void printConfig() {
         System.out.println(env.getProperty("spring.datasource.url"));
+    }
+
+    @Test
+    void failTest() {
+        assertEquals("True", "False");
     }
 
 }
